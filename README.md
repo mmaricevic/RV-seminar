@@ -1,6 +1,6 @@
 # RV-seminar
 Tema: Izrada prezentacija i postera 
 
-Author: Mario Maričević,
+Autori: Mario Maričević,
         Rea Prpić,
         Valentina Miculinić
