@@ -2,23 +2,31 @@
 \usepackage[croatian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
 \usetheme{Ilmenau}
 \definecolor{denim}{rgb}{0.08, 0.38, 0.74}
 \usecolortheme[named=denim]{structure}
-\begin{document}
 \author[Maričević,Prpić,Miculinić]{Mario Maričević | Rea Prpić | Valentina Miculinić}
 \title{*Izrada prezentacija i postera u Latexu*}
 \subtitle{Seminar iz kolegija Računalne vještine}
 \institute{Tehnički fakultet,Rijeka}
 \date{24.1.2017.}
-\frame{\titlepage}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
 \begin{frame}{Sadržaj}
 \tableofcontents
 \end{frame}
 
-\section{Kako izraditi prezentaciju?}
-\begin{frame}{Izrada prezentacije}
+\section{Početci izrade prezentacije}
+\subsection{Paketi}
+
+\begin{frame}{Izbor paketa}
 \begin{itemize}
+	\item Na početku važno je odabrati jedan od ponuđenih paketa za izradu prezentacija.
 	\item Neki od paketa koje možemo koristiti pri izradi su:
 \end{itemize}
 \begin{enumerate}
@@ -30,4 +38,140 @@
 	\item Svaki od njih posjeduje svoje prednosti i nedostatke.
 \end{itemize}
 \end{frame}
+
+\subsection{Preambula}
+
+\begin{frame}{Preambula prezentacije}
+Osim deklaracije paketa, potrebno je definirati podatke vezane uz izradu:
+\begin{itemize}
+	\item Naslov prezentacije \pause
+	\item Autora ili autore prezentacije \pause
+	\item Ustanovu \pause
+	\item Temu \pause
+	\item Datum izrade...
+\end{itemize} 
+\end{frame}
+
+\begin{frame}{Primjer preambule}
+	\begin{figure}[h]
+	\includegraphics[width=\textwidth,height=0.5\textheight]{picture1.png}
+	\caption{Preambula u Beamer dokumentu}
+	\end{figure}
+ \end{frame}
+
+ \subsection{Glavni dio dokumenta (body)}
+
+ \begin{frame}{Osnovno o glavnom dijelu dokumenta}
+ 	\begin{itemize}
+ 		\item U glavnom dijelu dokumenta izrađujemo sadržaj prezentacije.
+ 		\item Dodajemo tekst,slike,videa,tablice ...
+ 		\item Uređujemo našu prezentaciju korištenjem raznih naredbi.
+ 		\item Dvije najvažnije stvari su izgled i sadržaj.
+ 		\item Sadržaj mora biti kratak i jasan,a izgled oku primamljiv.
+    \end{itemize}
+ \end{frame}
+
+ \section{Svojstva paketa}
+
+ \subsection{Beamer}
+
+ \begin{frame}{Što je Beamer?}
+ 		\begin{itemize}
+ 			\item Beamer je paket za izradu prezentacije u Latexu koji nudi veliki izbor mogućnosti kao što su:
+ 		\end{itemize}
+ 		\begin{enumerate}
+ 			\item Kreiranje naslovnog slajda.
+ 			\item Kreiranje sadržajnog slajda.
+ 			\item Dodavanje dodatnih efekata u prezentaciju.
+ 			\item Isticanje pojedinih riječi ili rečenica.
+ 			\item Veliki izbor tema
+ 		\end{enumerate}
+\end{frame}
+
+\begin{frame}{Što je frame?}
+		\begin{itemize}
+			\item Prezentacija se sastoji od \textbf{frame-ova} koji nisu potpuno jednaki slajdovima.
+		\end{itemize}
+        \begin{alertblock}{Napomena!}	
+        		\textbf{Jedan frame može sadržavati više slajdova.}
+        \end{alertblock}
+        \begin{block}{Primjer}
+            Korištenje \textbf{pause} naredbe nakon određenog teksta.\newline
+            Svako korištenje naredbe \textbf{pause} Latex prezentira kao novi slajd, međutim to je i dalje isti frame!
+        \end{block}
+\end{frame}
+
+\begin{frame}{Korištenje naredbe Pause}
+		\begin{figure}
+		\includegraphics[width=0.3\textwidth,height=0.2\textheight]{picture2.png}
+		\caption{Naredba pause}
+		\end{figure}
+		\begin{figure}
+		\includegraphics[width=0.3\textwidth,height=0.3\textheight]{picture4.png}
+		\includegraphics[width=0.3\textwidth,height=0.3\textheight]{picture5.png}
+		\caption{Primjer dva slajda na jednom frame-u.}
+		\end{figure}
+\end{frame}
+
+\begin{frame}{Kreiranje naslovnog slajda}
+		\begin{itemize}
+			\item Naslovni slajd kreiramo naredbom \textbf{titlepage}
+		\end{itemize}
+		\begin{alertblock}{Napomena!}	
+        	Prije naredbe \textbf{titlepage} potrebno je definirati preambulu dokumenta.
+        \end{alertblock}
+        \begin{itemize}
+        	\item Naslovni slajd sadržava temu,autore,podnaslov,datum izrade...
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Kreiranje sadržajnog slajda}
+		\begin{itemize}
+			\item Sadržajni slajd kreira se naredbom \textbf{tableofcontents}.
+			\item Sadrži sve sekcije i podsekcije dokumenta.
+			\item Sekcije kreiramo naredbom \textbf{section},a podsekcije naredbom \textbf{subsection}.
+		\end{itemize}
+\end{frame}
+	
+\begin{frame}{Primjer sadržajnog slajda}
+	\begin{figure}
+		\includegraphics[width=0.7\textwidth,height=0.6\textheight]{picture9.png} 
+		\caption{Popis svih sekcija i podsekcija dokumenta}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Isticanje riječi ili rečenice}
+	\begin{itemize}
+		\item Postoje tri načina kako istaknuti ono što želimo:
+	\end{itemize}
+	\begin{enumerate}
+		\item Naredbom \textbf{block} definiramo kutiju u boji prezentacije.
+		\item Naredbom \textbf{alertblock} definiramo kutiju crvene boje koja predstavlja upozorenje.
+		\item Naredbom \textbf{examples} definiramo kutiju zelene boje kojom dajemo primjere.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Primjer isticanja teksta}
+	 	\begin{figure}
+		\includegraphics[width=\textwidth,height=0.3\textheight]{picture7.png} 
+		\caption{Isticanje teksta u Beameru}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Izbor teme}
+	\begin{itemize}
+		\item Beamer nudi širok izbor tema za izradu prezentacije.
+		\item Boje tema možemo prilagoditi našim željama.
+		\item Popis tema može se vidjeti \hyperlink{http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html}{\underline{\textbf{ovdje}}}.
+		\item Tema korištena u ovoj prezentaciji je Ilmenau.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Primjer dodavanja teme}
+		 \begin{figure}
+		\includegraphics[width=0.5\textwidth,height=0.1\textheight]{picture8.png} 
+		\caption{Definiranje teme i boje u preambuli dokumenta}
+	\end{figure}
+\end{frame}
 \end{document}
+
