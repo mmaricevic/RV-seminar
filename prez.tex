@@ -7,7 +7,7 @@
 \usetheme{Ilmenau}
 \definecolor{denim}{rgb}{0.08, 0.38, 0.74}
 \usecolortheme[named=denim]{structure}
-\author[Maričević,Prpić,Miculinić]{Mario Maričević | Rea Prpić | Valentina Miculinić}
+\author[Maričević, Prpić, Miculinić]{Mario Maričević | Rea Prpić | Valentina Miculinić}
 \title{*Izrada prezentacija i postera u Latexu*}
 \subtitle{Seminar iz kolegija Računalne vještine}
 \institute{Tehnički fakultet,Rijeka}
@@ -261,6 +261,107 @@ Osim deklaracije paketa, potrebno je definirati podatke vezane uz izradu:
 \end{frame}
 
 \section{Izrada postera}
+
+\begin{frame}{Izrada postera}
+
+    \begin{itemize}
+        \item Možemo ih raditi uz pomoć dva paketa: tikzposter i beamerposter
+        \item Oba koriste jednostavne komande, pružaju razne mogućnosti uređivanja i podržavaju velike formate papira
+    \end{itemize}
+    
+
+    
+\end{frame}
+    
+\begin{frame}{Tikzposter i Beamerposter}
+    
+    \textbf{Tikzposter}
+    \begin{itemize}
+        \item Kao i Beamerposter, koristi se za izradu postera u PDF formatu
+        \item Klasa dokumenta koja obuhvaća projekte fancyposter i tikzposter
+    \end{itemize}
+    
+ \textbf{Beamerposter}
+\begin{itemize}
+    \item Prednost: Beamerposter koristi istu sintaksu (iste komande) kao i Beamer prezentacija
+    \item Nedostatak: Nema velik izbor tema pa je malo manje fleksibilan od tikzpostera
+    \
+\end{itemize}
+    
+\end{frame}
+
+
+\subsection{Tikzposter}
+\begin{frame}{Tikzposter: Preambula}
+
+\begin{itemize}
+    \item Nakon deklaracije klase dokumenta (tikzposter) treba postaviti i ostale parametre, npr.:
+    \begin{itemize}
+        \item veličina fonta (12pt, 14pt, 17pt, 20pt, 24pt...)
+        \item veličina papira (a0, a1, a2...)
+        \item orijentacija papira (landscape ili portrait)
+        \item i dr.
+    \end{itemize}
+   \item  Kao i u prezentaciji, moramo definirati autora, datum, naslov i instituciju.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{}
+
+\begin{itemize}
+    \item Koristimo komandu \textbf{usetheme} kako bi zadali temu.
+    \item Neke od tema su koje možemo koristiti su: \begin{itemize}
+        \item Default		
+        \item Rays	
+        \item Basic	
+        \item Simple
+        \item Envelope 
+        \item Wave 
+        \item Board
+        \item Autum 
+        \item Desert		
+    \end{itemize}
+\end{itemize}
+    
+\end{frame}{}
+
+\begin{frame}{Glavni dio dokumenta (body)}
+\begin{itemize}
+    \item Glavni dio dokumenta formiramo blokovima teksta (koristeći naredbu \textbf{block})
+    \item Možemo mijenjati broj kolona (koristeći naredbu \textbf{column}) i njihovu širinu, što pruža puno fleksibilnosti
+    \item Komandu \textbf{note} koristimo kad želimo zapisati neke bilješke \textit{preko} blokova teksta
+    \item \textbf{\textit{NAPOMENA:}} standardna komanda za uvrštavanje slika \textit{ne funkcionira}, nego se mora koristiti naredba \textbf{tikzfigure}
+
+\end{itemize}
+    
+\end{frame}
+
+\subsection{Beamerposter}
+
+\begin{frame}{Beamerposter: Preambula}
+
+\begin{itemize}
+    \item Preambula beamerpostera je gotovo ista kao i preambula beamer prezentacije
+    \item Nakon deklaracije klase dokumenta i zadavanje osnovnih parametara, moramo se koristiti naredbom \textbf{usepackage} pomoću koje možemo zadati neke posebne parametre kao što su: \begin{itemize}
+        \item orijentacija postera (landscape ili portrait)
+        \item veličina postera (od a4 do a0, iako se dimenzije mogu i ručno namjestiti pomoću opcija \textit{width} i \textit{height})
+        \item Nakon toga slijede standardne informacije za poster kao što su naslov, autor, datum i sl.
+    \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Glavni dio dokumenta (body)}
+
+\begin{itemize}
+    \item Da bi se kreirao poster sav sadržaj mora biti napisan unutar \textit{frame} okvira
+    \item Glavnina sadržaja postera je u blokovima, kao i kod tikzpostera, a također se može koristiti naredba \textbf{column} za nove kolone
+\end{itemize}
+    
+\end{frame}
 
 \end{document}
 
